@@ -3,6 +3,7 @@ layout: page
 title: Docs
 permalink: /docs
 sidebar: true
+hidetitle: true
 ---
 
 {% assign entries = site.docs | sort: "number" %}

@@ -47,9 +47,7 @@ Any page that you add, meaning an `html` or `markdown` file in the [pages](pages
 
       sidebar: true
 
-When left undefined (desired for pages like news, 404, etc), this sidebar will be different:
-
-![img/sidebar.png](img/sidebar.png)
+When left undefined (desired for pages like news, 404, etc), this sidebar will not include the docs.
 
 
 ### How do the docs work?
