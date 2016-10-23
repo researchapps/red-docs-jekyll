@@ -1,0 +1,50 @@
+<div class="toc">
+
+<ul id="nav">
+
+    {% if page.sidebar %}
+    {% assign level-1 = site.docs | where: "sectionclass", "h1" | sort: "number"%}
+    {% for entry in level-1 %}
+    <li class="{% if entry.is-parent or forloop.first %}{% if entry.is-parent %}parent {% endif %}{% if forloop.first %} current{% endif %} navlink"{% endif %}>
+        <a href="{{ site.baseurl }}{{ page.url }}#{{ entry.sectionid }}">{{ entry.title }}</a>
+        {% if entry.is-parent %}
+            <ul>
+                {% assign level-2 = site.docs | where: "parent-id", entry.sectionid | sort: "number" %}
+                {% for child in level-2 %}
+                    <li class="{% if child.is-parent %}parent navlink{% else %}navlink{% endif %}">
+                        <a href="{{ site.baseurl }}{{ page.url }}#{{ child.sectionid }}">{{ child.title }}</a>
+                        {% if child.is-parent %}
+                            <ul>
+                                {% assign level-3 = site.docs | where: "parent-id", child.sectionid | sort: "number" %}
+                                {% for grandchild in level-3 %}
+                                <li class="navlink">
+                                    <a href="{{ site.baseurl }}{{ page.url }}#{{ grandchild.sectionid }}">{{ grandchild.title }}</a>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </li>
+    {% endfor %}
+    {% endif %}
+
+    <hr>
+
+    <li>
+        <a href="{{ site.baseurl }}">Home</a>
+    </li>
+    <li>
+        <a href="{{ site.baseurl }}docs">Documentation</a>
+    </li>
+    <li>
+        <a href="{{ site.baseurl }}about">About</a>
+    </li>
+    <li>
+        <a href="{{ site.baseurl }}blog">News</a>
+    </li>
+</ul>
+
+</div>

@@ -1,0 +1,73 @@
+# Dependencies
+highlighter:      rouge
+
+markdown: kramdown
+kramdown:
+ input: GFM
+ auto_ids: true
+ hard_wrap: false
+ syntax_highlighter: rouge
+
+# filter used to process markdown. note that kramdown differs from github-flavored markdown in some subtle ways
+
+# Permalinks
+permalink:        pretty
+
+# Setup
+title:            Documentation
+tagline:          'Research Portal'
+description:      'Documentation Template for Researchers'
+url:              http://researchapps.github.io/template-jekyll-docs
+baseurl:          /template-jekyll-docs/
+
+author:
+  name:           'Vanessa Sochat'
+  url:            https://twitter.com/StanfordCompute
+  github:         'researchapps'
+  twitter:        'StanfordCompute'  
+
+paginate:         5
+gems: [jekyll-paginate, jekyll-gist]
+collections:
+- docs
+
+# Defaults
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+
+
+# Stuff to ignore
+exclude:
+- playground
+- OLD
+- theme
+- src
+
+# Custom vars
+version:          1.0.0
+
+github:
+repo:           https://github.com/researchapps/template-jekyll-docs
+
+
+# Social networking, etc
+google_analtics: "UA-68034405-2"
+disqus_shortname: "stanfordrc"
+twitter_username: StanfordCompute
+github_username: researchapps
+contact_email: researchapps@googlegroups.com
+
+# Site information
+site_name:        RedDocs
+site_description: Documentation Template for Researchers
+site_favicon:     assets/img/favicon/favicon.ico # relative to baseurl
+#logo: assets/img/logo_small.png                 # relative to baseurl
+
+
+# Copyright
+copyright:        "Have questions? Feel free to contact <a href='mailto:researchapps@googlegroups.com'>Research Applications</a>"

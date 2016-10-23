@@ -1,0 +1,44 @@
+---
+title: search
+layout: none
+search: exclude
+---
+
+[
+{% for page in site.pages %}
+{% unless page.search == "exclude" %}
+{
+"title": "{{ page.title | escape }}",
+"tags": "{{ page.tags }}",
+"keywords": "{{page.keywords}}",
+"url": "{{ site.baseurl }}{{ page.url }}",
+"summary": "{{page.summary | strip }}"
+},
+{% endunless %}
+{% endfor %}
+
+{% for post in site.posts %}
+
+{
+"title": "{{ post.title | escape }}",
+"tags": "{{ post.tags }}",
+"keywords": "{{post.keywords}}",
+"url": "{{ site.baseurl }}{{ post.url }}",
+"summary": "{{post.summary | strip }}"
+},
+{% unless forloop.last %},{% endunless %}
+{% endfor %}
+
+{% assign entries = site.docs | sort: "number" %}
+{% for entry in entries %}
+{
+"title": "{{ entry.title | escape }}",
+"tags": "{{ entry.tags }}",
+"keywords": "{{ entry.keywords }}",
+"url": "{{ site.baseurl }}docs#{{ entry.sectionid }}",   
+"summary": "{{ page.summary | strip }}"
+}
+{% unless forloop.last %},{% endunless %}
+{% endfor %}
+
+]

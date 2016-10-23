@@ -1,0 +1,94 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
+
+    <!-- Block htmltitle -->
+      {% if page.title %}
+        <title>{{ page.title }} - {{ site.site_name }}</title>
+      {% elsif page.description %}
+        <title>{{ site.site_name }} - {{ page.description }}</title>
+      {% else %}
+        <title>{{ site.site_name }}</title>
+      {% endif %}
+      {% if page.description %}
+        <meta name="description" content="{{ page.description }}">
+      {% endif %}
+      {% if site.canonical_url %}
+        <link rel="canonical" href="{{ site.baseurl }}">
+      {% endif %}
+      {% if site.author.name %}
+        <meta name="author" content="{{ site.author.name }}">
+      {% endif %}
+
+    <meta property="og:url" content="{{ site.baseurl }}">
+    <meta property="og:title" content="{{ site.site_name }}">
+    <meta property="og:image" content="{{ site.baseurl }}{{ site.logo }}">
+    <meta name="apple-mobile-web-app-title" content="{{ site.site_name }}">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    {% if site.logo %}
+      <link rel="apple-touch-icon" href="{{ site.baseurl }}{{ site.logo }}">
+    {% endif %}
+    
+    <!-- Favicon -->
+    {% assign favicon = "assets/img/favicon/favicon.ico" %}
+    <link rel="shortcut icon" type="image/x-icon" href="{{ site.baseurl }}{{ favicon }}">
+    <link rel="icon" type="image/x-icon" href="{{ site.baseurl }}{{ favicon }}">
+    <style>
+      @font-face {
+      	font-family: 'Icon';
+      	src: url('{{ site.baseurl }}assets/fonts/icon.eot?52m981');
+      	src: url('{{ site.baseurl }}assets/fonts/icon.eot?#iefix52m981')
+               format('embedded-opentype'),
+      		   url('{{ site.baseurl }}assets/fonts/icon.woff?52m981')
+               format('woff'),
+      		   url('{{ site.baseurl }}assets/fonts/icon.ttf?52m981')
+               format('truetype'),
+      		   url('{{ sitebaseurl }}assets/fonts/icon.svg?52m981#icon')
+               format('svg');
+      	font-weight: normal;
+      	font-style: normal;
+      }
+    </style>
+
+    <!-- Stylesheets -->
+    {% if page.title == 'index' %}
+    <link rel="stylesheet" href="{{ site.baseurl }}assets/css/style.css">
+    {% else %}
+    <link rel="stylesheet" href="{{ site.baseurl }}assets/css/application-ca209dffa1.css"> 
+    <link rel="stylesheet" href="{{ site.baseurl }}assets/css/palettes-6bfdd7a338.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}assets/css/syntax.css">
+    {% endif %}
+
+    <link rel="stylesheet" href="{{ site.baseurl }}assets/fonts/font-awesome-4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" -->
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+
+    <style>
+        body, input {
+          font-family: 'Lato', Helvetica, Arial, sans-serif;
+        }
+        pre, code {
+          font-family: 'Source Code Pro', 'Courier New', 'Courier', monospace;
+        }
+    </style>
+
+    <!-- Stanford style -->
+    <link href="https://www.stanford.edu/su-identity/css/su-identity.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
+
+    <!-- Javascript -->
+    <base href="/" />
+    <script src="{{ site.baseurl }}assets/js/jquery-2.2.3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.1/react-with-addons.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="https://www.stanford.edu/su-identity/css/ie/ie8.css" />
+    <![endif]-->
+    <!--[if IE 7]>
+    <link rel="stylesheet" type="text/css" href="https://www.stanford.edu/su-identity/css/ie/ie7.css" />
+    <![endif]-->
+</head>

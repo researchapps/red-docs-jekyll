@@ -1,0 +1,14 @@
+{% if site.twitter_username %}
+    <a class="social-icon" href="https://twitter.com/{{ site.twitter_username }}" target="_blank">
+      <i class="fa fa-twitter" style="font-size:20px; float:right; padding-right:5px"></i>
+    </a>
+{% endif %}
+{% if site.github_username %}
+    <a class="social-icon" href="https://github.com/{{ site.github_username }}" target="_blank">
+      <i class="fa fa-github" style="font-size:20px; float:right; padding-right:5px"></i>
+    </a>
+{% endif %}
+    <a class="social-icon" href="{{ site.baseurl }}feed.xml" target="_blank">
+      <i class="fa fa-rss" style="font-size:20px; float:right; padding-right:5px"></i>
+    </a>
+

@@ -1,0 +1,74 @@
+<nav aria-label="Navigation">
+  <a href="{{ site.github.repo }}" class="project">
+    <div class="banner">
+      {% if site.logo %}
+        <div class="logo">
+          <img src="{{ base_url }}{{ site.logo }}">
+        </div>
+      {% endif %}
+      <div class="name">
+        <strong>
+          {{ site.site_name }}
+          <span class="version">
+            {% if site.version %}
+            {{ site.version }}
+            {% endif %}
+          </span>
+        </strong>
+         {% if site.github.repo %}
+          <br>
+          {{ site.github.repo }}
+        {% endif %}
+      </div>
+    </div>
+  </a>
+  <div class="scrollable">
+    <div class="wrapper">
+        <ul class="repo">
+          <li class="repo-download">
+            <a href="{{ site.github.repo }}/archive/{{ site.version }}.zip" target="_blank" title="Download" data-action="download">
+              <i class="icon icon-download"></i> Download
+            </a>
+          </li>
+          <li class="repo-stars">
+            <a href="{{ site.github.repo }}/stargazers" target="_blank" title="Stargazers" data-action="star">
+              <i class="icon icon-star"></i> Stars
+              <span class="count">&ndash;</span>
+            </a>
+          </li>
+        </ul>
+        <hr>
+      <div class="toc">
+        <ul>
+          {% for nav_item in nav %}
+
+            {% include "nav.html" %}
+
+          {% endfor %}
+        </ul>
+        {% if site.author %}
+          <hr>
+          <span class="section">The author</span>
+          <ul>
+            {% if site.author.twitter %}
+              {% assign author = site.author.twitter %}
+              <li>
+                <a href="https://twitter.com/{{ author }}" target="_blank" title="@{{ author }} on Twitter">
+                  @{{ author }} on Twitter
+                </a>
+              </li>
+            {% endif %}
+            {% if site.author.github %}
+              {% assign author = site.author.github %}
+              <li>
+                <a href="https://github.com/{{ author }}" target="_blank" title="@{{ author }} on GitHub">
+                  @{{ author }} on GitHub
+                </a>
+              </li>
+            {% endif %}
+          </ul>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</nav>

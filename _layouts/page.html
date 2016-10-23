@@ -1,0 +1,101 @@
+---
+layout: default
+---
+
+<body class="palette-primary-su palette-accent-su">
+ 
+    <!--backdrop and backdrop-paper divs deleted-->   
+    <input class="toggle" type="checkbox" id="toggle-drawer">
+    <input class="toggle" type="checkbox" id="toggle-search">
+    <label class="toggle-button overlay" for="toggle-drawer"></label>
+    <header class="header">
+        <nav aria-label="Header">
+    <div class="bar default">
+      <div class="button button-menu" role="button" aria-label="Menu">
+      <label class="toggle-button icon icon-menu" for="toggle-drawer">
+          <span></span>
+      </label>
+    </div>
+    <div class="stretch">
+      <div class="title">  
+          <span class="path" style="cursor:pointer">
+                Documentation<i class="icon icon-link"></i>
+          </span>
+          <span class="breadcrumb_title">{{ page.title }}</span>
+      </div>
+    </div>    
+  </div>
+
+   {% include search.html %}
+
+</nav>
+    </header>
+    <main class="main">
+      
+      <div class="drawer">
+        <nav aria-label="Navigation" id="stickynav">
+  
+  <a href="{{ site.baseurl }}" class="project">
+    <div class="banner">      
+        <div class="logo">
+          {% if site.logo %}
+          <img src="{{ site.baseurl }}{{ site.logo }}">
+          {% else %}
+          <a href="{{ site.repo }}" target="_blank"><i class="fa fa-file-text" style="font-size:40px;padding:20px 20px 20px 0px"></i></a>
+          {% endif %}
+        </div>
+      <div class="name">
+        <strong>
+          {{ site.site_name }}
+          <!--@vsoch removed version
+          <span class="version"></span>-->
+        </strong>
+      </div>
+    </div>
+  </a>
+  <div class="scrollable">
+    <div class="wrapper">
+        {% include page-navigation.html %}      
+    </div>
+  </div>
+</nav>
+      </div>
+      <article class="article">
+        <div class="wrapper">
+                              
+            <h1>{{ page.title }}</h1>
+            {{ content }}
+
+            <aside class="copyright" role="note">            
+              Have questions? Feel free to contact <a href='mailto:{{ site.contact_email }}'>{{ site.site_name }}</a>
+              {% include social_media.html %}
+              <p>&copy; {{ site.time | date: '%Y' }}. All rights reserved.</p>
+            </aside>
+          
+            <footer class="footer">
+            <script src="{{ site.baseurl }}assets/js/jquery.sticky.js"></script>
+            <script src="{{ site.baseurl }}assets/js/toc.js"></script>            
+            <script>
+            $(document).ready(function(){
+
+                // Navigation should stick to top of page when scroll
+                $("#stickynav").sticky({topSpacing:70});
+
+                // Change top breadcrumb when user navigates
+                $("a").click(function(){
+                    var url = $(this).attr('href').replace('{{ site.baseurl }}{{ page.url }}#','');
+                    $(".breadcrumb_title").text(url);
+                })
+
+                $(".path").click(function(){
+                    document.location = "{{ site.baseurl }}{{ page.url }}"
+                })
+
+            });
+            </script>
+
+            </footer>             
+        </div>
+      </article>
+    </main>
+</body>

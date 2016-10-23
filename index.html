@@ -1,0 +1,87 @@
+---
+layout: default
+title: index
+---
+
+  <body>
+      <div id="su-wrap"> <!-- #su-wrap start -->
+          <div id="su-content"> <!-- #su-content start -->
+              <div id="fixed_header" class="fixedheadercont visible">
+                  <header>
+                      {% if site.logo %}
+                      <a href="{{ site.baseurl }}"><img src="{{ site.baseurl }}{{ site.logo }}" height="30" alt="">{% else %}<i class="fa fa-file-text" style="padding-right:25px;font-size:34px;cursor:pointer"></i>{% endif %}
+                      <h2>{{ site.site_name }}</h2></a>
+                      
+                      <div class="navigationwrapper navigationfull" id="flat_nav">
+                      <nav class="navigation">
+                          <ul>
+                              <!-- Add links here-->
+                              <li class="navitem"><a href="{{ site.baseurl }}blog">News</a></li>
+                              <li class="navitem"><a href="{{ site.baseurl }}docs">Docs</a></li>
+                              <li class="navitem"><a href="{{ site.baseurl }}about">About</a></li>
+                          </ul>
+                       </nav>
+                      </div>
+                      <div class="navigationwrapper navigationslider" id="navigation_wrap"></div>
+                  </header>
+              </div>
+
+              <div class="navpusher">
+                  <div class="headerContainer">
+                      <div id="header_wrap" class="wrapper headerWrapper">
+                          <div class="inner">
+                              {% if site.logo %}
+                              <img class="projectLogo" height="200" src="{{ site.baseurl }}{{ site.logo }}" alt="">                       {% else %} 
+                              <a href="{{ site.repo }}" target="_blank">
+                              <i class="fa fa-file-text" style="padding:30px;font-size:200px"></i></a> 
+                              {% endif %}
+                              <h1 id="project_title">{{ site.site_name }}</h1>
+                              <h2 id="project_tagline">{{ site.description }}</h2>
+
+                              <section id="intro">
+                              <p>Need to have easy documentation for your personal or departmental research?  You have come to the right place! You can easily customize and deploy this template for your documentation needs.</p>
+                              </section>
+                              <div id="btns" class="section btn_section">
+                                  <a class="button blockbutton fontlight button" href="{{ site.baseurl }}docs">Get Started</a>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="main_cont">
+                      <div id="main_wrap" class="wrapper main_wrap">
+                          <div class="gridBlock">
+
+                              <!-- Compute -->
+                              <section id="compute" class="gridblock" style="text-align:center">
+                                  <h3>Code</h3>
+                                  <img src="{{ site.baseurl }}assets/img/compute1.png" height="100px" width="100px"/>
+                                  <p>You might need a good documentation base for your code. If it's hosted on github, you can serve it in the gh-pages branch of the same repository.</p>
+                              </section>
+
+                              <section id="explore" class="gridblock" style="text-align:center">
+                                  <h3>Collaborate</h3>
+                                  <img src="{{ site.baseurl }}assets/img/explore2.png" height="100px" width="100px"/>
+                                  <p>Sharing ideas and protocol for many, outside of document services, is challenging. How about a website?</p>
+                              </section>
+
+                              <section id="discover" class="gridblock" style="text-align:center">
+
+                                  <h3>Promote</h3>
+                                  <img src="{{ site.baseurl }}assets/img/discover2.png" height="100px" width="100px"/>
+                                  <p>A simple, clean page is an ideal way to promote your work.</p>
+                              </section>
+                        </div>
+
+                        <h3 id="why-use-sherlock">What do you research?</h3>
+                        <p>Here you can write about your overall scope and projects, or perhaps a specific project pertaining to this site.</p>
+                        <h3 id="cost">Who do you want to reach?</h3>
+                        <p>It is sometimes helpful to describe who your tool is intended for. Who are the users?</p>
+
+                        <h3 id="size">What does your code do?</h3>
+                        <p>If people don't care about your work or intended audience, they must be at the page to read the documentation. Read about it, and maybe even <a href="{{ site.baseurl }}docs">link to it</a> here.</p>
+                    </div>
+                </div>
+             </div> <!-- #su-content end -->
+        </div> <!-- #su-wrap end -->
+  </body>
