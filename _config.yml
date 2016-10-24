@@ -58,7 +58,7 @@ repo:           https://github.com/researchapps/template-jekyll-docs
 # Social networking, etc
 google_analtics: "UA-68034405-2"
 disqus_shortname: "stanfordrc"
-twitter_username: StanfordCompute
+twitter_username: StanfordApps
 github_username: researchapps
 contact_email: researchapps@googlegroups.com
 
