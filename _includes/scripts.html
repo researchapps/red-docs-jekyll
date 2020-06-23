@@ -2,7 +2,8 @@
   var base_url = '{{ site.baseurl }}';
   var repo_id  = '{{ site.github.repo }}';
 </script>
-
+<script src="{{ site.baseurl }}/assets/js/lunr.min.js"></script>
+<script src="{{ site.baseurl }}/assets/js/search.js"></script>
 {% if site.google_analytics %}
     {% include google_analytics.html %}
 {% endif %}
