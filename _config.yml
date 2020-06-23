@@ -17,8 +17,8 @@ permalink:        pretty
 title:            Documentation
 tagline:          'Research Portal'
 description:      'Documentation Template for Researchers'
-url:              http://researchapps.github.io/template-jekyll-docs
-baseurl:          /template-jekyll-docs/
+url:              http://researchapps.github.io/red-docs-jekyll
+baseurl:          /red-docs-jekyll/
 
 author:
   name:           'Vanessa Sochat'
@@ -52,15 +52,15 @@ exclude:
 version:          1.0.0
 
 github:
-repo:           https://github.com/researchapps/template-jekyll-docs
+repo:           https://github.com/researchapps/red-docs-jekyll
 
 
 # Social networking, etc
 google_analtics: "UA-68034405-2"
 disqus_shortname: "stanfordrc"
-twitter_username: StanfordApps
+twitter_username: StanfordCompute
 github_username: researchapps
-contact_email: researchapps@googlegroups.com
+contact_email: rse-services@lists.stanford.edu
 
 # Site information
 site_name:        RedDocs
@@ -70,4 +70,4 @@ site_favicon:     assets/img/favicon/favicon.ico # relative to baseurl
 
 
 # Copyright
-copyright:        "Have questions? Feel free to contact <a href='mailto:researchapps@googlegroups.com'>Research Applications</a>"
+copyright:        "Have questions? Feel free to contact <a href='mailto:rse-services@lists.stanford.edu'>RSE Services</a>"
