@@ -27,7 +27,7 @@ author:
   twitter:        'StanfordCompute'  
 
 paginate:         5
-gems: [jekyll-paginate, jekyll-gist]
+plugins: [jekyll-paginate, jekyll-gist]
 collections:
 - docs
 
